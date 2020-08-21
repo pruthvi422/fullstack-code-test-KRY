@@ -1,17 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<br lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Welcome to KRY</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-KRY status poller
-<ul id="service-list">
-</ul>
-<input type="text" id="url-name">
-<button id="post-service">Save</button>
 
+<h1 align="center" style="color:#061808bd;">
+    KRY Status Poller
+</h1>
+</br></br>
+<div align="center" id="addservice">
+    <div class="a">Add Service:</div>
+    <p>
+        <input type="text" id="url-name" placeholder="Add Url...">
+        <input type="text" id="name" placeholder="Add Name...">
+        <button id="post-service">Save</button>
+    </p>
+
+</div>
+
+
+</br></br>
+<div align="center">
+    <div class="a">List of Services:</div>
+    <table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Url</th>
+        <th>Status</th>
+        <th>Added</th>
+        <th>Save</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody id="service-list"/>
+</table>
+</div>
 </body>
 <script src="static/code.js">
 </script>
+<script language="javascript">
+    setTimeout(function(){
+        window.location.reload(1);
+    }, 30000);
 </html>
